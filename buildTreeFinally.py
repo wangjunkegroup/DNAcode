@@ -47,16 +47,15 @@ class Graph:
         return modified_paths
 
 
-# 从txt文件中读取邻接矩阵数据
+# Read adjacency matrix data from a txt file
 def read_adjacency_matrix_from_file(file_path):
     adjacency_matrix = []
     with open(file_path, "r") as file:
         content = file.read()
-        # 使用eval将字符串转换为列表
+        # Using the eval method to convert a string into a list
         adjacency_matrix = eval(content)
     return adjacency_matrix
 
-# # 给定的邻接矩阵
 # adj_matrix = [[0, 1, 0, 1, 0, 0, 1],
 #               [0, 0, 1, 0, 0, 0, 0],
 #               [0, 1, 0, 1, 0, 0, 0],
@@ -65,13 +64,13 @@ def read_adjacency_matrix_from_file(file_path):
 #               [0, 0, 0, 0, 0, 0, 1],
 #               [0, 0, 0, 0, 0, 0, 0]]
 
-# 调用函数读取邻接矩阵
+# Call a function to read the adjacency matrix
 adj_matrix = read_adjacency_matrix_from_file("./adjacency_matrix.txt")
 
-# 创建一个空的有向图对象
+# Create an empty directed graph object
 g = Graph()
 
-# 根据邻接矩阵添加边到有向图中
+# Add edges to the directed graph based on the adjacency matrix
 for i in range(len(adj_matrix)):
     for j in range(len(adj_matrix[i])):
         if adj_matrix[i][j] == 1:
@@ -212,7 +211,7 @@ def construct_tree(paths):
     return tree
 
 
-# 输出多叉树的所有路径结构
+# Output all path structures of a multiway tree
 def print_paths(tree, path=[]):
     if not tree:
         print(" -> ".join(map(str, path)))
@@ -229,6 +228,6 @@ for node in modified_nodes:
 print(path_list)
 print("--------------------")
 
-# 打印结果
+# Print result paths
 tree = construct_tree(path_list)
 print_paths(tree)
