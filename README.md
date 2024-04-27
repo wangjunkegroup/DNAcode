@@ -11,7 +11,7 @@
 The first row is the result of node partitioni for seven-node Hamiltonian gragh. The second row is the initial result of the path traversal. The third row shows the path traversal results obtained after integration.
 
 5. **pseudocode**:
- Class Graph:
+ ```Class Graph:
     Method add_edge(u, v):
         # Add an edge to the graph
 
@@ -61,4 +61,4 @@ for node in modified_nodes:
 tree = construct_tree(path_list)
 
 # Print the paths in the tree structure
-print_paths(tree)
+print_paths(tree)```
