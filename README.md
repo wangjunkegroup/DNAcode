@@ -61,4 +61,4 @@ for node in modified_nodes:
 tree = construct_tree(path_list)
 
 # Print the paths in the tree structure
-print_paths(tree)```
+print_paths(tree)
